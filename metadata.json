@@ -1,0 +1,7 @@
+{
+  "name": "吉林吉安交通安全守護網",
+  "description": "提供吉林吉安地區學校交通安全教育之完整資訊、組織架構、教學成果與交通輔導規劃之展示平台。",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
