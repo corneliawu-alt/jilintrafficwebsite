@@ -96,25 +96,45 @@ const App: React.FC = () => {
 
   // 當頁籤切換時，確保新頁面滾動到頂部
   useEffect(() => {
-    // 滾動到頂部的函數
+    // 滾動到頂部的函數 - 使用多種方法確保成功
     const scrollToTop = () => {
       if (mainContentRef.current) {
+        // 方法1: 直接設置 scrollTop
         mainContentRef.current.scrollTop = 0;
+        // 方法2: 使用 scrollTo
+        mainContentRef.current.scrollTo({ top: 0, behavior: 'auto' });
+        // 方法3: 使用 scrollIntoView（如果有 header 元素）
+        const header = mainContentRef.current.querySelector('header');
+        if (header) {
+          header.scrollIntoView({ behavior: 'auto', block: 'start' });
+        }
       }
     };
     
-    // 立即執行一次
+    // 立即執行
     scrollToTop();
     
-    // 使用 setTimeout 確保在 React 完成渲染後執行
-    const timeoutId = setTimeout(() => {
+    // 使用多個時機確保滾動成功 - 增加延遲時間
+    const timeout1 = setTimeout(scrollToTop, 10);
+    const timeout2 = setTimeout(scrollToTop, 100);
+    const timeout3 = setTimeout(scrollToTop, 200);
+    const timeout4 = setTimeout(scrollToTop, 300);
+    
+    // 使用 requestAnimationFrame
+    const rafId1 = requestAnimationFrame(() => {
       scrollToTop();
-      // 再延遲一次確保內容完全渲染
-      setTimeout(scrollToTop, 50);
-    }, 0);
+      const rafId2 = requestAnimationFrame(() => {
+        requestAnimationFrame(scrollToTop);
+      });
+      return rafId2;
+    });
     
     return () => {
-      clearTimeout(timeoutId);
+      clearTimeout(timeout1);
+      clearTimeout(timeout2);
+      clearTimeout(timeout3);
+      clearTimeout(timeout4);
+      cancelAnimationFrame(rafId1);
     };
   }, [activeTab.categoryId, activeTab.subCategoryId]);
 
@@ -628,7 +648,7 @@ const App: React.FC = () => {
                     <div className="absolute -top-4 -left-4 clay-button bg-[#be123c] text-white p-3 shadow-lg">
                       <ScrollText size={20} />
                     </div>
-                    <p className="text-[#4a4e69] text-2xl font-bold leading-relaxed text-center lg:text-left">
+                    <p className="text-[#4a4e69] text-2xl font-bold leading-relaxed text-left">
                       {activeSubCategory ? activeSubCategory.content : activeCategory?.content}
                     </p>
                   </div>
@@ -1142,6 +1162,191 @@ const App: React.FC = () => {
                           <img 
                             src="/data/3-2-4.jpg" 
                             alt="規劃校園進出之人車動線" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Images for 3-3 subcategory */}
+                  {activeTab.subCategoryId === '3-3' && (
+                    <>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-1.png" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-2.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-3.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-4.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-5.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
+                        <div className="space-y-4">
+                          <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
+                            1.學校訂定導護工作實施計畫、輪值表和志工排班表，並記錄導護工作狀況，且有相關訓練資源。
+                          </p>
+                          <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
+                            2.學校參與導護工作人力來源包括學校教職員128人、家長導護志工52人，導護志工會參與相關的研習。
+                          </p>
+                          <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
+                            3.依據相關辦法頒發感謝狀、辦理志工餐會及頒發導護服務時數，支援人力包括義交、警察、里長。
+                          </p>
+                        </div>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-7.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-8.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-9.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-10.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-11.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-12.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-13.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-14.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-3-15.jpg" 
+                            alt="交通服務及導護規劃" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                  {/* Images for 3-5 subcategory */}
+                  {activeTab.subCategoryId === '3-5' && (
+                    <>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-1.png" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-2.jpg" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-3.jpg" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-4.jpg" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-5.jpg" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
+                        <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left">
+                          學校進行愛心服務站簽訂、執行，本校簽約的愛心服務站共9間，如地圖所示。
+                        </p>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-8">
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-6.png" 
+                            alt="規劃家長接送區與愛心服務站" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                        </div>
+                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                          <img 
+                            src="/data/3-5-7.png" 
+                            alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                         </div>
