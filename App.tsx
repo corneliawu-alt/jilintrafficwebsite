@@ -1433,6 +1433,7 @@ const App: React.FC = () => {
                        </div>
                        <div className="grid md:grid-cols-2 gap-8">
                           {[
+                            { date: '115.01.21', text: '宣導相關交通法規，推薦福星公園和北投會館的逃生體驗，並討論學校週遭人行道斜坡的改善計畫。', icon: <Megaphone className="text-purple-400" /> },
                             { date: '114.10.31', text: '完成幼兒園大樹遷移，啟動寒假無障礙地坪與斜坡優化專案。', icon: <Trees className="text-emerald-400" /> },
                             { date: '114.01.03', text: '完成全體志工保險續約，並全面升級汰換電子哨與雨衣裝備。', icon: <Siren className="text-blue-400" /> },
                             { date: '113.11.01', text: <>1.鎖定校門口違停熱點，研討改善方式。<br/>2.上放學下雨天盡量穿著雨衣，及使用雨具的狀況。</>, icon: <Car className="text-orange-400" /> },
