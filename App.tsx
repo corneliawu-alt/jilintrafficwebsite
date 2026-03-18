@@ -319,26 +319,19 @@ const App: React.FC = () => {
         )}
 
         {/* Dynamic Header Section */}
-        <header className="mb-12 animate-in fade-in slide-in-from-top duration-1000">
-          <div className="clay-card p-10 bg-white/90 backdrop-blur-xl flex flex-col lg:flex-row justify-between items-center gap-8 border-b-8 border-[#f8fafc]">
-            <div className="flex items-center gap-8">
-              <div className="clay-button w-[5.25rem] h-[5.25rem] shrink-0 rounded-full p-1.5 bg-[#b9fbc0] rotate-3 hover:rotate-0 transition-transform shadow-lg flex items-center justify-center overflow-hidden">
-                <img
-                  src="/data/0-0-1.png"
-                  alt="交通安全"
-                  className="w-[4.5rem] h-[4.5rem] object-contain"
-                />
-              </div>
-              <div>
-                <h2 className="text-4xl font-black text-[#4a4e69] tracking-tighter leading-tight">
-                  吉林吉安，守護交安，心安平安
-                </h2>
-                <div className="flex items-center gap-4 mt-3">
-                  <div className="flex items-center gap-1.5 px-4 py-1.5 bg-[#ffecd2] text-[#d48c2c] rounded-full text-[11px] font-black uppercase shadow-sm">
-                    <Star size={12} className="fill-current" /> Safe Zone
-                  </div>
-                  <p className="text-[#94a3b8] text-sm font-bold italic border-l-2 border-[#e2e8f0] pl-4">臺北市吉林國小 交通安全數位平台</p>
+        <header className="mb-8 sm:mb-10 lg:mb-12 animate-in fade-in slide-in-from-top duration-1000">
+          <div className="clay-card px-6 py-8 sm:p-10 bg-white/90 backdrop-blur-xl flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 border-b-8 border-[#f8fafc]">
+            <div className="text-center lg:text-left flex-1 min-w-0">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#4a4e69] tracking-tighter leading-tight break-words">
+                吉林吉安，守護交安，心安平安
+              </h2>
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-3">
+                <div className="flex items-center gap-1.5 px-4 py-1.5 bg-[#ffecd2] text-[#d48c2c] rounded-full text-[10px] sm:text-[11px] font-black uppercase shadow-sm">
+                  <Star size={12} className="fill-current" /> Safe Zone
                 </div>
+                <p className="text-[#94a3b8] text-[11px] sm:text-sm font-bold italic border-l-0 sm:border-l-2 border-[#e2e8f0] pl-0 sm:pl-4">
+                  臺北市吉林國小 交通安全數位平台
+                </p>
               </div>
             </div>
             <div className="hidden lg:flex gap-6">
