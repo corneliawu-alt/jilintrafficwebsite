@@ -72,10 +72,30 @@ import {
   Legend
 } from 'recharts';
 
+const LG_PX = 1024;
+
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<ActiveTab>({ categoryId: CATEGORIES[0].id });
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+  /** 寬版（≥lg）：側欄固定顯示；窄版：可收合到畫面左外 */
+  const [isWideLayout, setIsWideLayout] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth >= LG_PX
+  );
+  const [isSidebarOpen, setIsSidebarOpen] = useState(
+    () => typeof window !== 'undefined' && window.innerWidth >= LG_PX
+  );
   const mainContentRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const updateLayout = () => {
+      const wide = window.innerWidth >= LG_PX;
+      setIsWideLayout(wide);
+      if (wide) setIsSidebarOpen(true);
+      else setIsSidebarOpen(false);
+    };
+    updateLayout();
+    window.addEventListener('resize', updateLayout);
+    return () => window.removeEventListener('resize', updateLayout);
+  }, []);
 
   const activeCategory = useMemo(() => 
     CATEGORIES.find(c => c.id === activeTab.categoryId), 
@@ -89,10 +109,12 @@ const App: React.FC = () => {
 
   const handleTabClick = (categoryId: string, subCategoryId?: string) => {
     setActiveTab({ categoryId, subCategoryId });
-    if (window.innerWidth < 1024) {
+    if (window.innerWidth < LG_PX) {
       setIsSidebarOpen(false);
     }
   };
+
+  const sidebarVisible = isWideLayout || isSidebarOpen;
 
   // 當頁籤切換時，確保新頁面滾動到頂部
   useEffect(() => {
@@ -191,13 +213,33 @@ const App: React.FC = () => {
       )}
       <FloatingDecor />
 
+      {/* 窄版：側欄開啟時點遮罩收合到左側 */}
+      {!isWideLayout && isSidebarOpen && (
+        <button
+          type="button"
+          aria-label="關閉選單"
+          className="fixed inset-0 z-30 bg-black/40 backdrop-blur-[2px] lg:hidden"
+          onClick={() => setIsSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar - Toy-like Dashboard Menu */}
-      <aside className={`
-        fixed lg:fixed z-40 w-80 h-screen lg:h-screen transition-all duration-700 cubic-bezier(0.19, 1, 0.22, 1) p-6
-        ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-      `}>
-        <div className="clay-card h-full flex flex-col bg-white overflow-hidden">
-          <div className="p-6 bg-gradient-to-br from-[#ffc8c0] to-[#fcd5ce] flex flex-col items-center gap-3 relative">
+      <aside
+        className={`
+        fixed left-0 top-0 z-40 w-[min(100vw-1.5rem,20rem)] max-w-[20rem] h-screen transition-transform duration-500 ease-out p-4 sm:p-6
+        ${sidebarVisible ? 'translate-x-0' : '-translate-x-full pointer-events-none'}
+      `}
+      >
+        <div className="clay-card h-full flex flex-col bg-white overflow-hidden shadow-2xl">
+          <div className="p-6 bg-gradient-to-br from-[#ffc8c0] to-[#fcd5ce] flex flex-col items-center gap-3 relative shrink-0">
+            <button
+              type="button"
+              aria-label="收合選單"
+              onClick={() => setIsSidebarOpen(false)}
+              className="absolute top-3 right-3 lg:hidden clay-button p-2 bg-white/90 text-[#881337] shadow-md"
+            >
+              <X size={22} />
+            </button>
             <div className="absolute top-0 left-0 w-full h-1 bg-white/20"></div>
             <div className="clay-button p-3 bg-white scale-110 shadow-xl">
               <ShieldCheck size={40} className="text-[#ff7b5f]" />
@@ -261,13 +303,18 @@ const App: React.FC = () => {
       </aside>
 
       {/* Main Content Area */}
-      <main ref={mainContentRef} className="flex-1 overflow-y-auto p-6 lg:p-12 lg:ml-80 relative z-10 custom-scrollbar">
-        {!isSidebarOpen && (
-          <button 
+      <main
+        ref={mainContentRef}
+        className={`flex-1 overflow-y-auto p-6 lg:p-12 relative z-10 custom-scrollbar min-w-0 ${isWideLayout ? 'lg:ml-80' : 'ml-0'}`}
+      >
+        {!sidebarVisible && (
+          <button
+            type="button"
+            aria-label="開啟選單"
             onClick={() => setIsSidebarOpen(true)}
-            className="fixed top-8 left-8 z-50 clay-button p-5 bg-[#ffb5a7] text-white lg:hidden shadow-2xl"
+            className="fixed top-4 left-4 z-50 clay-button p-4 sm:p-5 bg-[#ffb5a7] text-white shadow-2xl"
           >
-            <Menu size={28} />
+            <Menu size={26} />
           </button>
         )}
 
@@ -275,11 +322,11 @@ const App: React.FC = () => {
         <header className="mb-12 animate-in fade-in slide-in-from-top duration-1000">
           <div className="clay-card p-10 bg-white/90 backdrop-blur-xl flex flex-col lg:flex-row justify-between items-center gap-8 border-b-8 border-[#f8fafc]">
             <div className="flex items-center gap-8">
-              <div className="clay-button w-16 h-16 rounded-full p-2 bg-[#b9fbc0] rotate-3 hover:rotate-0 transition-transform shadow-lg flex items-center justify-center overflow-hidden">
-                <img 
-                  src="/data/0-0-1.png" 
-                  alt="交通安全" 
-                  className="w-full h-full object-contain"
+              <div className="clay-button w-[5.25rem] h-[5.25rem] shrink-0 rounded-full p-1.5 bg-[#b9fbc0] rotate-3 hover:rotate-0 transition-transform shadow-lg flex items-center justify-center overflow-hidden">
+                <img
+                  src="/data/0-0-1.png"
+                  alt="交通安全"
+                  className="w-[4.5rem] h-[4.5rem] object-contain"
                 />
               </div>
               <div>
