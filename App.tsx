@@ -294,10 +294,8 @@ const App: React.FC = () => {
             ))}
           </nav>
           
-          <div className="py-1 px-6 bg-[#f8fafc] text-center border-t-4 border-dashed border-[#f1f5f9]">
-            <div className="flex items-center justify-center">
-              <img src="/data/LOGO.png" alt="LOGO" className="h-[140px] w-auto object-contain max-w-full" />
-            </div>
+          <div className="px-4 pt-0 pb-0 bg-[#f8fafc] text-center border-t-2 border-dashed border-[#f1f5f9] leading-none">
+            <img src="/data/LOGO.png" alt="LOGO" className="h-[140px] w-auto object-contain max-w-full block mx-auto" />
           </div>
         </div>
       </aside>
