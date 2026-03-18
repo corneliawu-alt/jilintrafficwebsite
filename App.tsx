@@ -482,23 +482,22 @@ const App: React.FC = () => {
                       </p>
                     </div>
                   </div>
-                  
-                  {/* 交通安全標誌互動 SVG 區塊 */}
+
+                  {/* 交通安全標誌互動學習區塊（嵌入 SVG 網頁） */}
                   <div className="mt-12">
                     <h5 className="text-2xl font-black text-[#4a4e69] mb-4 tracking-tight">
                       交通安全標誌互動學習
                     </h5>
                     <p className="text-[#64748b] text-sm font-bold mb-6">
-                      點選下方互動式圖像中的標誌，認識各種道路交通標誌與其意義。
+                      透過互動式路口圖，點選各種標線與號誌，認識它們的名稱與功能。
                     </p>
                     <div className="clay-card p-4 bg-white border-4 border-[#e2e8f0] shadow-xl">
-                      <object
-                        data="traffic_signs.svg"
-                        type="image/svg+xml"
-                        className="w-full max-w-full h-[600px]"
-                      >
-                        您的瀏覽器不支援互動式 SVG，請改用桌機版 Chrome、Edge 或 Safari 瀏覽。
-                      </object>
+                      <iframe
+                        src="/data/traffic_signs.svg"
+                        title="交通安全標誌互動學習"
+                        className="w-full max-w-full"
+                        style={{ height: '600px', border: 'none' }}
+                      />
                     </div>
                   </div>
                 </section>
