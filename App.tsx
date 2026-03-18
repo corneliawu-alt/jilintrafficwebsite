@@ -322,7 +322,7 @@ const App: React.FC = () => {
         <header className="mb-8 sm:mb-10 lg:mb-12 animate-in fade-in slide-in-from-top duration-1000">
           <div className="clay-card px-6 py-8 sm:p-10 bg-white/90 backdrop-blur-xl flex flex-col lg:flex-row justify-between items-center gap-6 sm:gap-8 border-b-8 border-[#f8fafc]">
             <div className="text-center lg:text-left flex-1 min-w-0">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#4a4e69] tracking-tighter leading-tight break-words">
+              <h2 className="text-xl sm:text-2xl lg:text-4xl font-black text-[#4a4e69] tracking-tight leading-tight whitespace-nowrap">
                 吉林吉安，守護交安，心安平安
               </h2>
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 mt-3">
@@ -372,7 +372,7 @@ const App: React.FC = () => {
                     <div className="clay-button bg-[#b9fbc0] text-[#2d4a31] px-6 py-2.5 text-[11px] font-black w-fit mb-4 shadow-xl animate-bounce-slow">
                       <Sparkles size={14} className="mr-2" /> 最新消息
                     </div>
-                    <h3 className="text-4xl lg:text-6xl font-black text-white leading-[1.05] mb-4 drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] tracking-tighter">
+                    <h3 className="text-2xl sm:text-3xl lg:text-5xl font-black text-white leading-[1.05] mb-4 drop-shadow-[0_10px_20px_rgba(0,0,0,0.3)] tracking-tight whitespace-nowrap">
                       交通安全教育宣導
                     </h3>
                     <p className="text-white/80 text-lg lg:text-xl font-bold leading-relaxed mb-0 max-w-xl">
