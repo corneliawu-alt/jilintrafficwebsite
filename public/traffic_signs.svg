@@ -1,0 +1,72 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      /* ÌoSïOr */
+      .bg-grass { fill: #A8D5BA; }
+      .road { fill: #555555; }
+      .marking-white { fill: #FFFFFF; }
+      .marking-yellow { fill: #FFD700; }
+      .red-line { stroke: #FF3333; stroke-width: 8; stroke-linecap: round; }
+      
+      /* qF-±ÏÞÊÚŒ1 JS o: */
+      .box { display: none; transform-origin: center; }
+      .box.active { display: block; }
+      
+      /* ïÞÊ„¤Ú±@ */
+      .trigger { fill: transparent; cursor: pointer; }
+      .trigger:hover { fill: rgba(255,255,255,0.15); }
+      
+      /* ‡WFÚ#WMFÚM¢ú	 */
+      .bubble-bg { fill: #FFFFFF; stroke-width: 4; rx: 15; filter: drop-shadow(2px 4px 4px rgba(0,0,0,0.2)); }
+      .bubble-title { font-size: 14px; font-weight: bold; font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; }
+      .bubble-text { font-size: 12px; font-family: "Microsoft JhengHei", "PingFang TC", sans-serif; fill: #444444; }
+      .pointer { fill: #FFFFFF; stroke-width: 3; }
+      
+      /* Ýþi */
+      .tree-top { fill: #4CAF50; }
+      .tree-trunk { fill: #795548; }
+      
+      /*  È º */
+      .traffic-light-pole { fill: #37474F; }
+      .traffic-light-box { fill: #263238; stroke: #455A64; stroke-width: 2; }
+      .light-red { fill: #E53935; }
+      .light-red.off { fill: #5D4037; }
+      .light-yellow { fill: #FDD835; }
+      .light-yellow.off { fill: #5D4037; }
+      .light-green { fill: #43A047; }
+      .light-green.off { fill: #2E7D32; }
+      .pedestrian-box { fill: #263238; stroke: #455A64; stroke-width: 2; }
+      .pedestrian-red { fill: #E53935; }
+      .pedestrian-red.off { fill: #5D4037; }
+      .pedestrian-green { fill: #43A047; }
+    </style>
+  </defs>
+
+  <rect class="bg-grass" width="800" height="600"/>
+  
+  <rect class="road" x="300" y="0" width="200" height="600"/>
+  <rect class="road" x="0" y="200" width="800" height="200"/>
+  <path d="M 300 0 L 300 200 L 0 200" fill="none" stroke="#DDDDDD" stroke-width="2"/>
+  <path d="M 500 0 L 500 200 L 800 200" fill="none" stroke="#DDDDDD" stroke-width="2"/>
+  <path d="M 0 400 L 300 400 L 300 600" fill="none" stroke="#DDDDDD" stroke-width="2"/>
+  <path d="M 800 400 L 500 400 L 500 600" fill="none" stroke="#DDDDDD" stroke-width="2"/>
+
+  <g transform="translate(150, 80)">
+    <rect class="tree-trunk" x="-5" y="0" width="10" height="40"/>
+    <circle class="tree-top" cx="0" cy="0" r="30"/>
+    <circle class="tree-top" cx="-15" cy="-15" r="20"/>
+    <circle class="tree-top" cx="15" cy="-15" r="20"/>
+  </g>
+  <g transform="translate(650, 500)">
+    <rect class="tree-trunk" x="-5" y="0" width="10" height="40"/>
+    <circle class="tree-top" cx="0" cy="0" r="30"/>
+    <circle class="tree-top" cx="-15" cy="-15" r="20"/>
+    <circle class="tree-top" cx="15" cy="-15" r="20"/>
+  </g>
+
+  <!-- åg¹9î traffic_signs.svg øe -->
+  <!-- úpŒŒåè/ê­wd public/traffic_signs.svg H, -->
+
+  <!-- ºÀÇEáevïbÚqFš©
+       æ›”HÉŸ traffic_signs.svg Œhø -->
+</svg>
