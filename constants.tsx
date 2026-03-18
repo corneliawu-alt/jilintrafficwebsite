@@ -10,7 +10,11 @@ import {
   MapPin,
   Car,
   Award,
-  Megaphone
+  Megaphone,
+  User,
+  Bus,
+  Bike,
+  Smile
 } from 'lucide-react';
 import { Category } from './types';
 
@@ -72,7 +76,33 @@ export const CATEGORIES: Category[] = [
       {
         id: '2-1',
         title: '2-1 規劃培養核心能力的教學',
-        content: '學校規劃各年級課程計劃並融入交通安全教育主題架構課程，經課發會審議通過。',
+        content: (
+          <div className="space-y-4">
+            <p>
+              學校規劃各年級課程計劃並融入交通安全教育主題架構課程，經課發會審議通過。
+            </p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                { text: '一年級：交通安全起步走', icon: <User className="w-4 h-4" /> },
+                { text: '二年級：優質小乘客', icon: <Car className="w-4 h-4" /> },
+                { text: '三年級：平安行，好心情', icon: <Smile className="w-4 h-4" /> },
+                { text: '四年級：搭車小高手', icon: <Bus className="w-4 h-4" /> },
+                { text: '五年級：快樂平安行', icon: <Award className="w-4 h-4" /> },
+                { text: '六年級：自行車逍遙遊', icon: <Bike className="w-4 h-4" /> },
+              ].map(({ text, icon }) => (
+                <div
+                  key={text}
+                  className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-[#fee2e2] text-[#1f2937] shadow-sm"
+                >
+                  <span className="flex items-center justify-center w-8 h-8 rounded-full bg-[#fb7185] text-white text-sm font-black">
+                    {icon}
+                  </span>
+                  <span className="text-base font-bold">{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ),
         details: []
       },
       {

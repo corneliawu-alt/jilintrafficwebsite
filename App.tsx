@@ -482,6 +482,25 @@ const App: React.FC = () => {
                       </p>
                     </div>
                   </div>
+                  
+                  {/* 交通安全標誌互動 SVG 區塊 */}
+                  <div className="mt-12">
+                    <h5 className="text-2xl font-black text-[#4a4e69] mb-4 tracking-tight">
+                      交通安全標誌互動學習
+                    </h5>
+                    <p className="text-[#64748b] text-sm font-bold mb-6">
+                      點選下方互動式圖像中的標誌，認識各種道路交通標誌與其意義。
+                    </p>
+                    <div className="clay-card p-4 bg-white border-4 border-[#e2e8f0] shadow-xl">
+                      <object
+                        data="/traffic_signs.svg"
+                        type="image/svg+xml"
+                        className="w-full max-w-full h-[600px]"
+                      >
+                        您的瀏覽器不支援互動式 SVG，請改用桌機版 Chrome、Edge 或 Safari 瀏覽。
+                      </object>
+                    </div>
+                  </div>
                 </section>
 
                 <div className="grid md:grid-cols-3 gap-10">
@@ -621,6 +640,20 @@ const App: React.FC = () => {
                       />
                     </div>
                   </div>
+                  {/* 0-5 圖下方補充 0-4-2 ~ 0-4-5 圖片 */}
+                  <div className="clay-card p-8 bg-white border-8 border-white shadow-2xl mt-8">
+                    <div className="grid md:grid-cols-2 gap-8">
+                      {['0-4-2.png', '0-4-3.png', '0-4-4.png', '0-4-5.png'].map((fileName) => (
+                        <div key={fileName} className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-xl">
+                          <img 
+                            src={`/data/${fileName}`} 
+                            alt="主要道路上放學交通規劃補充圖片" 
+                            className="w-full h-auto rounded-[32px] object-contain"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </section>
               </div>
             ) : (
@@ -648,9 +681,9 @@ const App: React.FC = () => {
                     <div className="absolute -top-4 -left-4 clay-button bg-[#be123c] text-white p-3 shadow-lg">
                       <ScrollText size={20} />
                     </div>
-                    <p className="text-[#4a4e69] text-2xl font-bold leading-relaxed text-left">
+                    <div className="text-[#4a4e69] text-2xl font-bold leading-relaxed text-left space-y-4">
                       {activeSubCategory ? activeSubCategory.content : activeCategory?.content}
-                    </p>
+                    </div>
                   </div>
 
                   {/* Course Content Chart for 2-1 subcategory */}
