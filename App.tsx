@@ -493,7 +493,7 @@ const App: React.FC = () => {
                     </p>
                     <div className="clay-card p-4 bg-white border-4 border-[#e2e8f0] shadow-xl">
                       <object
-                        data="/traffic_signs.svg"
+                        data="traffic_signs.svg"
                         type="image/svg+xml"
                         className="w-full max-w-full h-[600px]"
                       >
