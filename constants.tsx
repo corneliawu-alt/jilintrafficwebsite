@@ -79,7 +79,7 @@ export const CATEGORIES: Category[] = [
         content: (
           <div className="space-y-4">
             <p>
-              學校規劃各年級課程計劃並融入交通安全教育主題架構課程，經課發會審議通過。
+              學校規劃各年級課程計劃並融入交通安全教育主題架構課程。
             </p>
             <div className="grid sm:grid-cols-2 gap-4">
               {[
