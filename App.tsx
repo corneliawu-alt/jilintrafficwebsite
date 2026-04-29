@@ -470,6 +470,24 @@ const App: React.FC = () => {
                         allowFullScreen
                       ></iframe>
                     </div>
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="w-full h-full rounded-[32px]"
+                        src="https://www.youtube.com/embed/ZySvfKse1G0"
+                        title="交通安全教育影片 5"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="w-full h-full rounded-[32px]"
+                        src="https://www.youtube.com/embed/2jjaGAIADLU"
+                        title="交通安全教育影片 6"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                 </section>
 
@@ -536,6 +554,15 @@ const App: React.FC = () => {
                         className="w-full max-w-full"
                         style={{ height: '600px', border: 'none' }}
                       />
+                    </div>
+                    <div className="mt-8">
+                      <div className="clay-card p-2 bg-white border-4 border-[#e2e8f0] shadow-xl overflow-hidden rounded-[28px]">
+                        <img
+                          src="/data/0-0-2.png"
+                          alt="交通安全宣導"
+                          className="w-full h-auto object-contain block"
+                        />
+                      </div>
                     </div>
                   </div>
                 </section>
@@ -798,7 +825,7 @@ const App: React.FC = () => {
                   {activeTab.subCategoryId === '2-1' && (
                     <>
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-1.jpg" 
                           alt="規劃培養核心能力的教學" 
@@ -948,54 +975,75 @@ const App: React.FC = () => {
                   {/* Images for 1-2 subcategory */}
                   {activeTab.subCategoryId === '1-2' && (
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-2.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全委員會議
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-3.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          教師研習進修規劃表
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-4.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全講師教師研習
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-5.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全講師教師研習
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-6.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全講師教師研習
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-7.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          警員交通安全教師研習
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-2-8.jpg" 
                           alt="強化教師交通安全教育知能" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          警員交通安全教師研習
+                        </p>
                       </div>
                     </div>
                   )}
@@ -1003,33 +1051,45 @@ const App: React.FC = () => {
                   {/* Images for 1-3 subcategory */}
                   {activeTab.subCategoryId === '1-3' && (
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-3-1.jpg" 
                           alt="向家長與社區民眾宣導" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          開學日警員校門口交通宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-3-2.jpg" 
                           alt="向家長與社區民眾宣導" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          開學迎新活動交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-3-3.jpg" 
                           alt="向家長與社區民眾宣導" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶里長里民交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-3-4.jpg" 
                           alt="向家長與社區民眾宣導" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶導護志工協助交通安全宣導
+                        </p>
                       </div>
                     </div>
                   )}
@@ -1049,19 +1109,25 @@ const App: React.FC = () => {
                   {activeTab.subCategoryId === '2-2' && (
                     <>
                       <div className="grid md:grid-cols-2 gap-8">
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-1.jpg" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校園牆面交通標誌情境佈置
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-2.jpg" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            學務處外公布欄交通安全教育宣導和成果展示
+                          </p>
                         </div>
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
@@ -1070,26 +1136,35 @@ const App: React.FC = () => {
                         </p>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-4.jpg" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            遊覽車逃生演練說明
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-5.jpg" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            遊覽車逃生演練實作
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-6.jpg" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            遊覽車逃生演練說明
+                          </p>
                         </div>
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
@@ -1098,19 +1173,25 @@ const App: React.FC = () => {
                         </p>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-12.png" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校外教學行前說明會文件
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/2-2-13.png" 
                             alt="落實交通情境設置與教學" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校外教學行前說明注意事項
+                          </p>
                         </div>
                       </div>
                     </>
@@ -1119,47 +1200,92 @@ const App: React.FC = () => {
                   {/* Images for 2-3 subcategory */}
                   {activeTab.subCategoryId === '2-3' && (
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-1.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          兒童朝會校長交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-2.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          兒童朝會班級交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-3.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          兒童朝會班級交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-4.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          晨間活動警察協同入班防身警報器宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-5.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶親師趣味競賽交通安全宣導
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-6.jpg" 
                           alt="舉辦各類交通安全活動" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶親師趣味競賽交通安全宣導
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl md:col-span-2">
+                        <video
+                          controls
+                          playsInline
+                          preload="metadata"
+                          className="w-full rounded-[32px] bg-black object-contain"
+                          style={{ height: '420px' }}
+                        >
+                          <source src="/data/2-3-7-1.MOV" type="video/mp4" />
+                          <source src="/data/2-3-7-1.MOV" type="video/quicktime" />
+                          您的瀏覽器不支援影片播放。
+                        </video>
+                        <p className="text-center text-[#94a3b8] font-semibold text-xs mt-2">
+                          若無法播放，請
+                          <a
+                            href="/data/2-3-7-1.MOV"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[#0ea5e9] hover:underline ml-1"
+                          >
+                            點此開啟影片
+                          </a>
+                        </p>
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全班級專題演講
+                        </p>
                       </div>
                     </div>
                   )}
@@ -1214,19 +1340,25 @@ const App: React.FC = () => {
                         </p>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-2-2.jpg" 
                             alt="規劃校園進出之人車動線" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            交通安全委員會議
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-2-3.jpg" 
                             alt="規劃校園進出之人車動線" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            交通安全委員會議
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl md:col-span-2">
                           <img 
@@ -1250,33 +1382,45 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-2.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            交通安全講師教師研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-3.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            交通安全講師教師研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-4.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-5.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
@@ -1293,33 +1437,45 @@ const App: React.FC = () => {
                         </div>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-7.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-8.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-9.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-3-10.jpg" 
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            教師交通安全研習
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1468,19 +1624,25 @@ const App: React.FC = () => {
                   {/* Images for 1-1 subcategory */}
                   {activeTab.subCategoryId === '1-1' && (
                     <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-1-2.jpg" 
                           alt="交通安全教育推動組織" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全委員會議
+                        </p>
                       </div>
-                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/1-1-3.jpg" 
                           alt="交通安全教育推動組織" 
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全委員會議
+                        </p>
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl md:col-span-2">
                         <img 
