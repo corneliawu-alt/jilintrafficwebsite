@@ -1268,21 +1268,9 @@ const App: React.FC = () => {
                           className="w-full rounded-[32px] bg-black object-contain"
                           style={{ height: '420px' }}
                         >
-                          <source src="/data/2-3-7-1.MOV" type="video/mp4" />
-                          <source src="/data/2-3-7-1.MOV" type="video/quicktime" />
+                          <source src="/data/2-3-7-2.mp4" type="video/mp4" />
                           您的瀏覽器不支援影片播放。
                         </video>
-                        <p className="text-center text-[#94a3b8] font-semibold text-xs mt-2">
-                          若無法播放，請
-                          <a
-                            href="/data/2-3-7-1.MOV"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[#0ea5e9] hover:underline ml-1"
-                          >
-                            點此開啟影片
-                          </a>
-                        </p>
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           交通安全班級專題演講
                         </p>
