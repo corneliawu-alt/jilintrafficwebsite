@@ -42,6 +42,7 @@ import {
   Presentation,
   UserCheck,
   Laptop,
+  PhoneCall,
   Megaphone,
   RefreshCw,
   Youtube,
@@ -1607,7 +1608,7 @@ const App: React.FC = () => {
                             <HeartHandshake size={28} />
                           </div>
                           <h4 className="text-lg font-black text-[#4a4e69]">跨域支援</h4>
-                          <p className="text-sm font-bold text-[#64748b]">結合義交、警察與里長，擴大校園安全守護量能。</p>
+                          <p className="text-sm font-bold text-[#64748b]">結合義交、志工和里長，擴大校園安全守護量能。</p>
                         </div>
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
@@ -1731,6 +1732,9 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校門口家長、安親班接送規劃
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1738,6 +1742,9 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校門口家長接送交通告示牌
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1745,6 +1752,9 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校門口家長接送區告示牌
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1752,6 +1762,9 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校門口家長接送區時間規劃
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1759,12 +1772,46 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校門口安親班接送區告示牌
+                          </p>
                         </div>
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
-                        <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left">
-                          學校進行愛心服務站簽訂、執行，本校簽約的愛心服務站共9間，如地圖所示。
-                        </p>
+                        <div className="space-y-5 text-left">
+                          <h5 className="text-2xl font-black text-[#4a4e69] tracking-tight flex items-center gap-3">
+                            <span className="w-9 h-9 clay-button bg-[#fee2e2] text-[#be123c] flex items-center justify-center">
+                              <HeartHandshake size={18} />
+                            </span>
+                            愛心服務站設置與守護機制
+                          </h5>
+                          <p className="text-[#4a4e69] text-lg sm:text-xl font-bold leading-loose">
+                            本校與周邊商家及社區據點共同簽訂並落實「愛心服務站」機制，提供學生於通學途中即時、安全且可近性的協助。現已設置 9 間愛心服務站，分布位置如地圖所示，形成校園周邊在地化安全守護網。
+                          </p>
+                          <div className="grid md:grid-cols-3 gap-4">
+                            <div className="clay-card p-4 bg-white border-2 border-[#e2e8f0] text-center">
+                              <div className="w-11 h-11 mx-auto mb-3 clay-button bg-[#dcfce7] text-[#15803d] flex items-center justify-center">
+                                <HeartHandshake size={22} />
+                              </div>
+                              <p className="text-sm font-black text-[#4a4e69]">即時求助</p>
+                              <p className="text-xs font-bold text-[#64748b] mt-1">通學途中遇到突發狀況，可立即尋求協助。</p>
+                            </div>
+                            <div className="clay-card p-4 bg-white border-2 border-[#e2e8f0] text-center">
+                              <div className="w-11 h-11 mx-auto mb-3 clay-button bg-[#dbeafe] text-[#1d4ed8] flex items-center justify-center">
+                                <PhoneCall size={22} />
+                              </div>
+                              <p className="text-sm font-black text-[#4a4e69]">聯繫支援</p>
+                              <p className="text-xs font-bold text-[#64748b] mt-1">可協助聯繫家長、學校或相關單位。</p>
+                            </div>
+                            <div className="clay-card p-4 bg-white border-2 border-[#e2e8f0] text-center">
+                              <div className="w-11 h-11 mx-auto mb-3 clay-button bg-[#fee2e2] text-[#be123c] flex items-center justify-center">
+                                <ShieldCheck size={22} />
+                              </div>
+                              <p className="text-sm font-black text-[#4a4e69]">安全庇護</p>
+                              <p className="text-xs font-bold text-[#64748b] mt-1">提供短暫安全停留空間，守護學生返家平安。</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
@@ -1773,6 +1820,9 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            校園周圍愛心服務站店家
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1780,22 +1830,43 @@ const App: React.FC = () => {
                             alt="規劃家長接送區與愛心服務站" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            愛心服務站約定書
+                          </p>
                         </div>
                       </div>
                     </>
                   )}
 
-                  {/* Embedded webpage for 3-4 subcategory */}
+                  {/* 3-4 subcategory link and image */}
                   {activeTab.subCategoryId === '3-4' && (
-                    <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
-                      <div className="w-full" style={{ height: '800px' }}>
-                        <iframe
-                          src="https://roadsafety.tw/"
-                          className="w-full h-full rounded-[32px] border-0"
-                          title="交通安全網站"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                    <div className="space-y-8">
+                      <div className="clay-card p-8 bg-[#fffcfc] border-[#fff5f5] border-4">
+                        <div className="space-y-4 text-[#4a4e69]">
+                          <p className="text-lg sm:text-xl font-black leading-loose">
+                            「道安總動員」可以幫助親師生快速掌握通學風險，重點如下：
+                          </p>
+                          <div className="space-y-3 text-base sm:text-lg font-bold leading-loose">
+                            <p>👨‍👩‍👧‍👦 家長：查看學校周邊事故熱點與高風險時段，接送時可提前避開危險路口。</p>
+                            <p>🧒 學生：了解常見肇事原因與事故樣態，學會正確用路與自我保護方法。</p>
+                            <p>🤝 共同行動：親師生一起討論資料，調整通學路線與日常習慣，降低事故風險。</p>
+                          </div>
+                        </div>
+                        <a
+                          href="https://roadsafety.tw/SchoolHotSpots#"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 mt-5 px-6 py-3 rounded-full bg-[#ffb5a7] text-white font-black text-sm shadow-lg hover:bg-[#fb7185] transition-colors"
+                        >
+                          前往道安總動員（學校周邊熱點）
+                        </a>
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/3-4-1.png"
+                          alt="道安總動員學校周邊熱點"
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
                       </div>
                     </div>
                   )}
