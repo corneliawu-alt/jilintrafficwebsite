@@ -379,6 +379,8 @@ const App: React.FC = () => {
                   </div>
                 </section>
 
+                {(activeTab.subCategoryId === '0-1' || !activeTab.subCategoryId) && (
+                <>
                 {/* 交通安全五大守則 */}
                 <section className="clay-card p-12 bg-white border-8 border-white shadow-2xl">
                   <h4 className="text-3xl font-black text-[#4a4e69] mb-8 tracking-tight border-l-8 border-[#ffb5a7] pl-6">
@@ -427,8 +429,10 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 </section>
+                </>
+                )}
 
-                {/* YouTube 影片區塊 */}
+                {activeTab.subCategoryId === '0-2' && (
                 <section className="clay-card p-12 bg-white border-8 border-white shadow-2xl">
                   <h4 className="text-3xl font-black text-[#4a4e69] mb-8 tracking-tight border-l-8 border-[#ffb5a7] pl-6">
                     交通安全教育影片
@@ -488,10 +492,29 @@ const App: React.FC = () => {
                         allowFullScreen
                       ></iframe>
                     </div>
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="w-full h-full rounded-[32px]"
+                        src="https://www.youtube.com/embed/S3CUbrC5IrY"
+                        title="交通安全教育影片 7"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                    <div className="aspect-video w-full">
+                      <iframe
+                        className="w-full h-full rounded-[32px]"
+                        src="https://www.youtube.com/embed/xIusVrJhz4g"
+                        title="交通安全教育影片 8"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                   </div>
                 </section>
+                )}
 
-                {/* 交通安全五大運動 */}
+                {(activeTab.subCategoryId === '0-1' || !activeTab.subCategoryId) && (
                 <section className="clay-card p-12 bg-white border-8 border-white shadow-2xl">
                   <h4 className="text-3xl font-black text-[#4a4e69] mb-8 tracking-tight border-l-8 border-[#a0c4ff] pl-6">
                     二、交通安全五大運動
@@ -539,6 +562,87 @@ const App: React.FC = () => {
                     </div>
                   </div>
 
+                  <div className="mt-10 p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4 space-y-4">
+                    <h5 className="text-2xl font-black text-[#4a4e69] tracking-tight">
+                      小綠人亮起 ✅ 安心通行，但別只看秒數 ⏱️
+                    </h5>
+                    <p className="text-[#4a4e69] text-lg font-bold leading-relaxed">
+                      過馬路請記得「左看、右看、再左看」👀，先觀察路口環境，確認無來車再前進 🚶🚶。
+                    </p>
+                    <div className="space-y-3">
+                      <p className="text-[#be123c] text-lg font-black">👉 小綠人閃爍時：</p>
+                      <ul className="space-y-2 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-disc">
+                        <li>⚠️ 代表通行時間即將結束，不是催你奔跑。</li>
+                        <li>✏️ 還沒踏上斑馬線，請先停下 🛑，在人行道上安全等候下一個綠燈。</li>
+                        <li>✏️ 已在路口中，請儘速、安全通過路口。</li>
+                      </ul>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="text-[#be123c] text-lg font-black">👉 等候過馬路時請記得：</p>
+                      <ul className="space-y-2 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-disc">
+                        <li>站在行人穿越道後方，避開轉彎車動線（避免內輪差）。</li>
+                        <li>提高警覺，隨時注意周遭來車。</li>
+                      </ul>
+                    </div>
+                    <p className="text-[#4a4e69] text-lg font-black leading-relaxed">
+                      安全不是靠運氣，而是靠「看得見彼此」👀。你我多一眼，安全多一點 ❤️ 平安到家最重要。
+                    </p>
+                  </div>
+
+                  <div className="mt-8 p-8 clay-card bg-[#f8fbff] border-[#dbeafe] border-4 space-y-5">
+                    <h5 className="text-2xl font-black text-[#4a4e69] tracking-tight">
+                      臺北市學齡少年自行車事故統計重點（112年1月至115年2月）
+                    </h5>
+                    <p className="text-[#4a4e69] text-lg font-bold leading-relaxed">
+                      統計顯示，學齡少年（7-18歲）騎乘自行車交通事故共 1,433 件，造成 1 人死亡、1,009 人受傷。
+                    </p>
+
+                    <div className="space-y-2">
+                      <p className="text-[#1d4ed8] text-lg font-black">（一）主要肇事原因（前10項）</p>
+                      <ol className="space-y-1 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-decimal">
+                        <li>未注意車前狀況</li>
+                        <li>其他不當駕車行為</li>
+                        <li>未依規定讓車</li>
+                        <li>左轉彎未依規定</li>
+                        <li>起步時未注意安全</li>
+                        <li>違反號誌管制或指揮</li>
+                        <li>違反特定標誌（線）禁制</li>
+                        <li>變換車道或方向不當</li>
+                        <li>逆向行駛</li>
+                        <li>未靠右行駛</li>
+                      </ol>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-[#1d4ed8] text-lg font-black">（二）肇事年齡層</p>
+                      <ul className="space-y-1 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-disc">
+                        <li>13-15歲（國中學齡）：417 人</li>
+                        <li>16-18歲（高中學齡）：316 人</li>
+                        <li>7-12歲（國小學齡）：174 人</li>
+                      </ul>
+                    </div>
+
+                    <div className="space-y-2">
+                      <p className="text-[#1d4ed8] text-lg font-black">（三）肇事位置</p>
+                      <ul className="space-y-1 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-disc">
+                        <li>交叉路口：52.72%</li>
+                        <li>路段：25.10%</li>
+                        <li>自行車道：13.81%</li>
+                      </ul>
+                    </div>
+
+                    <div className="space-y-3">
+                      <p className="text-[#be123c] text-lg font-black">🚴‍♀️【安全騎乘，從你我開始】🚦</p>
+                      <ul className="space-y-2 text-[#4a4e69] text-base font-bold leading-relaxed pl-6 list-disc">
+                        <li>車道上靠右行駛、不闖紅燈、不逆向。</li>
+                        <li>雙手握把，不滑手機、不戴耳機。</li>
+                        <li>轉彎記得打手勢，夜間開燈更安全。</li>
+                        <li>安全帽、亮色衣物、車燈與反光片缺一不可。</li>
+                        <li>人車共道人行道，車靠外、人靠內，並禮讓行人。</li>
+                      </ul>
+                    </div>
+                  </div>
+
                   {/* 交通安全標誌互動學習區塊（嵌入 SVG 網頁） */}
                   <div className="mt-12">
                     <h5 className="text-2xl font-black text-[#4a4e69] mb-4 tracking-tight">
@@ -566,12 +670,20 @@ const App: React.FC = () => {
                     </div>
                   </div>
                 </section>
+                )}
 
+                {activeTab.subCategoryId === '0-3' && (
                 <div className="grid md:grid-cols-3 gap-10">
                   {[
-                    { icon: <Youtube size={48} />, title: '臺北市交通安全宣導', color: '#ffadad', desc: '宣導影片報你知', link: 'https://sts.tp.edu.tw/Resource/datalist/3' },
-                    { icon: <ImageIcon size={48} />, title: '臺北市政府交通局', color: '#ffd6a5', desc: '臺北交通安心行', link: 'https://dot.gov.taipei/pedestriansafety/' },
-                    { icon: <ScrollText size={48} />, title: '靖娟兒童安全文教基金會', color: '#fdffb6', desc: '交通安全教材包', link: 'https://www.safe.org.tw/news-detail/135__1/' }
+                    { icon: <Youtube size={48} />, title: '交通安全e網通', color: '#ffadad', desc: '最新資訊都在此', link: 'https://www.roadsafety.taipei/' },
+                    { icon: <ImageIcon size={48} />, title: '臺北市政府交通局', color: '#ffd6a5', desc: '臺北交通安心行', link: 'https://dot.gov.taipei/News.aspx?n=49485DDB31F5CB17&sms=C012E6AFD9E4E009' },
+                    { icon: <ScrollText size={48} />, title: '靖娟兒童安全文教基金會', color: '#fdffb6', desc: '交通安全教材包', link: 'https://www.safe.org.tw/news-detail/135__1/' },
+                    { icon: <Globe size={48} />, title: '168交通安全入口網', color: '#caffbf', desc: '交通安全主題與教材', link: 'https://168.motc.gov.tw/' },
+                    { icon: <Laptop size={48} />, title: '教育部教育雲之「數位學習入口網」', color: '#bde0fe', desc: '交通安全教育線上課程教材', link: 'https://elearning.cloud.edu.tw/' },
+                    { icon: <BookOpenCheck size={48} />, title: '教育部教育雲之「教育大市集」', color: '#d9f99d', desc: '交通安全教育線上課程教材', link: 'https://market.cloud.edu.tw/' },
+                    { icon: <Presentation size={48} />, title: '教育部教育雲之「教育媒體影音」', color: '#e9d5ff', desc: '交通安全教育線上課程教材', link: 'https://market.cloud.edu.tw/video/' },
+                    { icon: <School size={48} />, title: '教育部因材網交通安全專區', color: '#fecaca', desc: '因材網學習資源', link: 'https://adl.edu.tw/HomePage/home/' },
+                    { icon: <FileSpreadsheet size={48} />, title: 'CIRN 國民中小學課程與教學資源整合平臺', color: '#bfdbfe', desc: '課程與教學整合資源', link: 'https://cirn.moe.edu.tw/WebNews/details.aspx?sid=1106&mid=5638&nid=3073' }
                   ].map((card, i) => {
                     const CardContent = (
                       <div className="clay-card p-12 bg-white flex flex-col items-center text-center gap-8 group hover:bg-[#fff9f9]">
@@ -594,6 +706,7 @@ const App: React.FC = () => {
                     );
                   })}
                 </div>
+                )}
               </div>
             ) : activeTab.categoryId === 'basic-info' ? (
               <div className="space-y-16">

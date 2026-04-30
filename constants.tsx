@@ -20,10 +20,36 @@ import { Category } from './types';
 
 export const CATEGORIES: Category[] = [
   {
+    id: 'visit-data',
+    title: '交通安全教育輔導訪視資料',
+    icon: 'FileText',
+    content: '本頁彙整交通安全教育輔導訪視資料，包含訪視重點、執行成果與佐證文件，供校內檢核與對外說明使用。'
+  },
+  {
     id: 'safety-promotion',
     title: '交通安全宣導',
     icon: 'Megaphone',
-    content: '本校積極推廣交通安全觀念，透過多元化宣導素材與數位媒體，強化親師生的安全意識，營造安全的校園通學環境。包含定期主題宣導、影音多媒體資源及重要法規提醒。'
+    content: '本校積極推廣交通安全觀念，透過多元化宣導素材與數位媒體，強化親師生的安全意識，營造安全的校園通學環境。包含定期主題宣導、影音多媒體資源及重要法規提醒。',
+    subCategories: [
+      {
+        id: '0-1',
+        title: '交通安全宣導重點主題',
+        content: '彙整交通安全重點主題，包含五大守則、五大運動與互動式學習內容。',
+        details: []
+      },
+      {
+        id: '0-2',
+        title: '交通安全宣導影片',
+        content: '提供交通安全教育宣導影片，協助親師生建立安全用路觀念。',
+        details: []
+      },
+      {
+        id: '0-3',
+        title: '交通安全宣導資源',
+        content: '整合交通安全相關網站與教材資源，提供延伸學習與教學使用。',
+        details: []
+      }
+    ]
   },
   {
     id: 'basic-info',
