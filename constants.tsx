@@ -23,7 +23,7 @@ export const CATEGORIES: Category[] = [
     id: 'visit-data',
     title: '交通安全教育輔導訪視資料',
     icon: 'FileText',
-    content: '本頁彙整交通安全教育輔導訪視資料，包含訪視重點、執行成果與佐證文件，供校內檢核與對外說明使用。'
+    content: '本頁為交通安全教育輔導訪視資料，待上傳。'
   },
   {
     id: 'safety-promotion',
