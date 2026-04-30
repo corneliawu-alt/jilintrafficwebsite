@@ -163,11 +163,10 @@ const App: React.FC = () => {
   const transportData = [
     { name: '走路', 上學: 34, 放學: 31 },
     { name: '家長汽車', 上學: 26, 放學: 11 },
-    { name: '家長機車', 上學: 31, 放學: 28 },
+    { name: '家長機車', 上學: 33, 放學: 29 },
     { name: '公車', 上學: 4, 放學: 2 },
     { name: '捷運', 上學: 2, 放學: 2 },
     { name: '補習班接送', 上學: 0, 放學: 24 },
-    { name: '其他', 上學: 2, 放學: 1 },
   ];
 
   const homepageBgUrl = "https://images.unsplash.com/photo-1545128485-c400e7702796?q=80&w=2070&auto=format&fit=crop"; 
@@ -854,6 +853,77 @@ const App: React.FC = () => {
                 </div>
 
                 <div className="space-y-16 relative z-10">
+                  {/* Summary cards for 3-2 subcategory (show before text) */}
+                  {activeTab.subCategoryId === '3-2' && (
+                    <div className="grid md:grid-cols-3 gap-6">
+                      <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                        <div className="w-14 h-14 clay-button bg-[#dbeafe] flex items-center justify-center text-[#1d4ed8] shadow-lg">
+                          <MapPin size={28} />
+                        </div>
+                        <h4 className="text-lg font-black text-[#4a4e69]">人車分流</h4>
+                        <p className="text-sm font-bold text-[#64748b]">學生統一大門放學，減少人車交織風險。</p>
+                      </div>
+                      <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                        <div className="w-14 h-14 clay-button bg-[#fee2e2] flex items-center justify-center text-[#be123c] shadow-lg">
+                          <UserCheck size={28} />
+                        </div>
+                        <h4 className="text-lg font-black text-[#4a4e69]">放學控管</h4>
+                        <p className="text-sm font-bold text-[#64748b]">各樓層交通服務隊協助班級分流與秩序管理。</p>
+                      </div>
+                      <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                        <div className="w-14 h-14 clay-button bg-[#dcfce7] flex items-center justify-center text-[#15803d] shadow-lg">
+                          <ShieldAlert size={28} />
+                        </div>
+                        <h4 className="text-lg font-black text-[#4a4e69]">路口守護</h4>
+                        <p className="text-sm font-bold text-[#64748b]">導護志工與義交於路口協助，提升通學安全。</p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Data visualization for 3-1 subcategory */}
+                  {activeTab.subCategoryId === '3-1' && (
+                    <div className="clay-card p-10 bg-white border-4 border-[#e2e8f0] shadow-2xl">
+                      <h4 className="text-2xl font-black text-[#4a4e69] mb-3 tracking-tight">
+                        通學方式比較分析圖
+                      </h4>
+                      <p className="text-[#64748b] text-sm font-bold mb-8">
+                        以百分比比較上學與放學通學方式，快速掌握接送型態差異與交通管理重點。
+                      </p>
+                      <div className="h-[360px] w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <BarChart data={transportData} barGap={12}>
+                            <CartesianGrid strokeDasharray="6 6" vertical={false} stroke="#e2e8f0" />
+                            <XAxis
+                              dataKey="name"
+                              fontSize={12}
+                              tick={{ fill: '#64748b', fontWeight: 800 }}
+                              axisLine={false}
+                              tickLine={false}
+                              dy={10}
+                            />
+                            <YAxis
+                              unit="%"
+                              tick={{ fill: '#64748b', fontWeight: 700 }}
+                              axisLine={false}
+                              tickLine={false}
+                            />
+                            <Tooltip
+                              contentStyle={{
+                                borderRadius: '20px',
+                                border: 'none',
+                                boxShadow: '0 12px 30px rgba(0,0,0,0.1)',
+                                fontWeight: 800,
+                              }}
+                            />
+                            <Legend verticalAlign="top" height={40} iconType="circle" />
+                            <Bar dataKey="上學" fill="#ffb5a7" radius={[10, 10, 0, 0]} />
+                            <Bar dataKey="放學" fill="#93c5fd" radius={[10, 10, 0, 0]} />
+                          </BarChart>
+                        </ResponsiveContainer>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="p-12 clay-card bg-[#fffcfc] border-[#fff5f5] border-4 relative">
                     <div className="absolute -top-4 -left-4 clay-button bg-[#be123c] text-white p-3 shadow-lg">
                       <ScrollText size={20} />
@@ -1421,11 +1491,16 @@ const App: React.FC = () => {
                         />
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
-                        <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-center lg:text-left">
-                          因校內停車空間不足，除專設無障礙停車格外，其餘空間由同仁自行靠邊依序停放。
-                        </p>
+                        <div className="max-w-4xl mx-auto text-left space-y-3">
+                          <h5 className="text-xl sm:text-2xl font-black text-[#4a4e69] tracking-tight">
+                            停車空間管理說明
+                          </h5>
+                          <p className="text-[#4a4e69] text-lg sm:text-xl font-bold leading-loose">
+                            考量校內停車空間有限，除保留無障礙停車格外，其餘車位由同仁依動線靠邊、依序停放，以維持校園通行順暢與安全。
+                          </p>
+                        </div>
                       </div>
-                      <div className="grid md:grid-cols-2 gap-8">
+                      <div className="grid md:grid-cols-3 gap-8">
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-2-2.jpg" 
@@ -1433,7 +1508,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            交通安全委員會議
+                            第一停車場
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1443,15 +1518,18 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            交通安全委員會議
+                            無障礙停車格
                           </p>
                         </div>
-                        <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl md:col-span-2">
+                        <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                           <img 
                             src="/data/3-2-4.jpg" 
                             alt="規劃校園進出之人車動線" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            第二停車場
+                          </p>
                         </div>
                       </div>
                     </>
@@ -1475,7 +1553,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            交通安全講師教師研習
+                            交通服務隊兒童朝會頒獎
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1485,7 +1563,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            交通安全講師教師研習
+                            川堂交通服務隊執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1495,7 +1573,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            學校大門交通服務隊執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1505,20 +1583,46 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            川堂總導護老師和交通服務隊執勤情形
                           </p>
                         </div>
                       </div>
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                          <div className="w-14 h-14 clay-button bg-[#fee2e2] flex items-center justify-center text-[#be123c] shadow-lg">
+                            <ClipboardList size={28} />
+                          </div>
+                          <h4 className="text-lg font-black text-[#4a4e69]">計畫管理</h4>
+                          <p className="text-sm font-bold text-[#64748b]">導護計畫、輪值與值勤紀錄，制度化落實管理。</p>
+                        </div>
+                        <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                          <div className="w-14 h-14 clay-button bg-[#dbeafe] flex items-center justify-center text-[#1d4ed8] shadow-lg">
+                            <Users2 size={28} />
+                          </div>
+                          <h4 className="text-lg font-black text-[#4a4e69]">人力培訓</h4>
+                          <p className="text-sm font-bold text-[#64748b]">整合教職員與家長志工，持續辦理研習與增能。</p>
+                        </div>
+                        <div className="clay-card bg-white p-6 border-4 border-[#e2e8f0] flex flex-col items-center text-center gap-3">
+                          <div className="w-14 h-14 clay-button bg-[#dcfce7] flex items-center justify-center text-[#15803d] shadow-lg">
+                            <HeartHandshake size={28} />
+                          </div>
+                          <h4 className="text-lg font-black text-[#4a4e69]">跨域支援</h4>
+                          <p className="text-sm font-bold text-[#64748b]">結合義交、警察與里長，擴大校園安全守護量能。</p>
+                        </div>
+                      </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
-                        <div className="space-y-4">
+                        <div className="space-y-4 text-left max-w-5xl">
+                          <h5 className="text-2xl font-black text-[#4a4e69] tracking-tight">
+                            導護人力運作與支持系統
+                          </h5>
                           <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
-                            1.學校訂定導護工作實施計畫、輪值表和志工排班表，並記錄導護工作狀況，且有相關訓練資源。
+                            1. 學校訂定導護工作實施計畫、輪值表及志工排班表，並落實值勤紀錄與回饋檢核，確保導護工作穩定執行。
                           </p>
                           <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
-                            2.學校參與導護工作人力來源包括學校教職員128人、家長導護志工52人，導護志工會參與相關的研習。
+                            2. 參與導護工作人力包含學校教職員 128 人、家長導護志工 52 人，並安排志工參與相關研習與增能課程。
                           </p>
                           <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-left pl-8" style={{ textIndent: '-1.5em' }}>
-                            3.依據相關辦法頒發感謝狀、辦理志工餐會及頒發導護服務時數，支援人力包括義交、警察、里長。
+                            3. 依據相關規定辦理感謝狀頒發、志工餐會與導護服務時數認證；並結合義交、警察與里長等外部人力共同支援。
                           </p>
                         </div>
                       </div>
@@ -1530,7 +1634,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            導護志工校門口執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1540,7 +1644,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            導護志工校門口執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1550,7 +1654,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            導護志工校門口執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
@@ -1560,7 +1664,7 @@ const App: React.FC = () => {
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                            教師交通安全研習
+                            導護志工長春吉林路口執勤情形
                           </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
@@ -1569,6 +1673,9 @@ const App: React.FC = () => {
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            導護志工積極參與研習學習
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1576,6 +1683,9 @@ const App: React.FC = () => {
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            家長會辦理志工餐會感謝導護志工辛勤付出
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1583,6 +1693,9 @@ const App: React.FC = () => {
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            本校導護志工榮獲金輪獎殊榮
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1590,6 +1703,9 @@ const App: React.FC = () => {
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            本校導護志工榮獲優良導護志工殊榮
+                          </p>
                         </div>
                         <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                           <img 
@@ -1597,6 +1713,9 @@ const App: React.FC = () => {
                             alt="交通服務及導護規劃" 
                             className="w-full h-auto rounded-[32px] object-cover"
                           />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            本校導護志工榮獲優良導護志工殊榮
+                          </p>
                         </div>
                       </div>
                     </>
