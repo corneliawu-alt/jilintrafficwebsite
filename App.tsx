@@ -1260,21 +1260,6 @@ const App: React.FC = () => {
                           60週年校慶親師趣味競賽交通安全宣導
                         </p>
                       </div>
-                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl md:col-span-2">
-                        <video
-                          controls
-                          playsInline
-                          preload="metadata"
-                          className="w-full rounded-[32px] bg-black object-contain"
-                          style={{ height: '420px' }}
-                        >
-                          <source src="/data/2-3-7-2.mp4" type="video/mp4" />
-                          您的瀏覽器不支援影片播放。
-                        </video>
-                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
-                          交通安全班級專題演講
-                        </p>
-                      </div>
                     </div>
                   )}
 
