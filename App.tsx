@@ -930,7 +930,57 @@ const App: React.FC = () => {
                       <ScrollText size={20} />
                     </div>
                     <div className="text-[#4a4e69] text-2xl font-bold leading-relaxed text-left space-y-4">
-                      {activeSubCategory ? activeSubCategory.content : activeCategory?.content}
+                      {activeTab.subCategoryId === '2-2' ? (
+                        <div className="space-y-5">
+                          <div className="space-y-3">
+                            <div className="grid md:grid-cols-3 gap-6">
+                              {[
+                                { icon: <Layout size={30} />, title: '1.', line: '校園交通標誌與宣導佈置' },
+                                { icon: <Bus size={30} />, title: '2.', line: '校外教學車輛逃生演練' },
+                                { icon: <FileCheck size={30} />, title: '3.', line: '行前說明文件與注意事項' },
+                              ].map((item) => (
+                                <div key={item.title} className="clay-card bg-white p-6 border-4 border-[#f8fafc] flex flex-col items-center gap-4 text-center transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7]">
+                                  <div className="w-14 h-14 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-lg">
+                                    {item.icon}
+                                  </div>
+                                  <p className="font-black text-[#881337] text-base leading-snug">
+                                    {item.title}<br />{item.line}
+                                  </p>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                          <h4 className="text-3xl font-black tracking-tight">交通情境設置與校外教學安全實作</h4>
+                          <div className="space-y-4">
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-md flex-shrink-0">
+                                <CheckCircle2 size={18} />
+                              </div>
+                              <p className="text-xl font-bold leading-relaxed">
+                                <span className="font-black">推動主軸：</span>本校以「校內情境佈置」與「校外活動演練」雙軌推動交通安全教育，讓學生從認識規則、實際操作到行前準備，建立完整且可落實的安全行動能力。
+                              </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-md flex-shrink-0">
+                                <Layout size={18} />
+                              </div>
+                              <p className="text-xl font-bold leading-relaxed">
+                                <span className="font-black">校內情境：</span>透過交通標誌、宣導海報與安全標語，讓學生在日常生活中持續接觸、辨識並理解交通資訊。
+                              </p>
+                            </div>
+                            <div className="flex items-start gap-3">
+                              <div className="w-9 h-9 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-md flex-shrink-0">
+                                <Bus size={18} />
+                              </div>
+                              <p className="text-xl font-bold leading-relaxed">
+                                <span className="font-black">校外實作：</span>藉由車輛逃生演練與行前重點提醒，強化應變能力與自我保護觀念，將交通安全真正落實在每一次的活動學習中。
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ) : (
+                        activeSubCategory ? activeSubCategory.content : activeCategory?.content
+                      )}
                     </div>
                   </div>
 
@@ -1013,63 +1063,63 @@ const App: React.FC = () => {
                         <img 
                           src="/data/2-1-1.jpg" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-4.jpg" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-3.png" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-2.png" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-5.jpg" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-6.png" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-7.png" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-8.jpg" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-1-9.png" 
                           alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
@@ -1128,10 +1178,18 @@ const App: React.FC = () => {
                       </div>
                       <div className="clay-card bg-white p-6 border-4 border-[#f8fafc] flex flex-col items-center gap-4 text-center transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7]">
                         <div className="w-16 h-16 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-lg">
+                          <GraduationCap size={32} />
+                        </div>
+                        <p className="font-black text-[#881337] text-sm leading-snug">
+                          3.<br />邀請交通安全講師進行主題交安宣導
+                        </p>
+                      </div>
+                      <div className="clay-card bg-white p-6 border-4 border-[#f8fafc] flex flex-col items-center gap-4 text-center transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7]">
+                        <div className="w-16 h-16 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-lg">
                           <Users2 size={32} />
                         </div>
                         <p className="font-black text-[#881337] text-sm leading-snug">
-                          3.<br />學校和警政單位合作入班宣導
+                          4.<br />學校和警政單位合作入班宣導
                         </p>
                       </div>
                       <div className="clay-card bg-white p-6 border-4 border-[#f8fafc] flex flex-col items-center gap-4 text-center transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7]">
@@ -1139,7 +1197,7 @@ const App: React.FC = () => {
                           <Bike size={32} />
                         </div>
                         <p className="font-black text-[#881337] text-sm leading-snug">
-                          4.<br />體表會趣味競賽結合腳踏車安全騎乘教育
+                          5.<br />體表會趣味競賽結合腳踏車安全騎乘教育
                         </p>
                       </div>
                     </div>
@@ -1247,6 +1305,26 @@ const App: React.FC = () => {
                       </div>
                       <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
+                          src="/data/1-3-1-1.jpg" 
+                          alt="向家長與社區民眾宣導" 
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          開學日和社區派出所警員共同宣導交通安全
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img 
+                          src="/data/1-3-1-2.jpg" 
+                          alt="向家長與社區民眾宣導" 
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          開學日和社區派出所警員共同宣導交通安全
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img 
                           src="/data/1-3-2.jpg" 
                           alt="向家長與社區民眾宣導" 
                           className="w-full h-auto rounded-[32px] object-cover"
@@ -1275,6 +1353,16 @@ const App: React.FC = () => {
                           60週年校慶導護志工協助交通安全宣導
                         </p>
                       </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img 
+                          src="/data/1-3-5.jpg" 
+                          alt="向家長與社區民眾宣導" 
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60周年校慶家長會協助交通安全宣導
+                        </p>
+                      </div>
                     </div>
                   )}
 
@@ -1297,7 +1385,7 @@ const App: React.FC = () => {
                           <img 
                             src="/data/2-2-1.jpg" 
                             alt="落實交通情境設置與教學" 
-                            className="w-full h-auto rounded-[32px] object-cover"
+                            className="w-full h-[320px] rounded-[32px] object-cover object-top"
                           />
                           <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                             校園牆面交通標誌情境佈置
@@ -1316,7 +1404,7 @@ const App: React.FC = () => {
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
                         <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-center lg:text-left">
-                          配合校外教學活動進行逃生演練活動，並確實進行車輛安全審核。
+                          配合校外教學活動，本校於行前實施車輛逃生演練，並同步完成車輛安全審核，確保車況、設備與緊急應變流程皆符合安全標準。
                         </p>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
@@ -1353,7 +1441,7 @@ const App: React.FC = () => {
                       </div>
                       <div className="p-8 clay-card bg-[#fffcfc] border-[#fff5f5] border-4">
                         <p className="text-[#4a4e69] text-xl font-bold leading-relaxed text-center lg:text-left">
-                          在校外活動前確實跟學生說明相關注意事項，包含行車安全及行程交通狀況。
+                          在校外活動出發前，教師會完整說明行車安全守則、上下車動線、集合回報方式與行程交通狀況，協助學生掌握風險重點並落實安全行為。
                         </p>
                       </div>
                       <div className="grid md:grid-cols-2 gap-8">
@@ -1388,7 +1476,7 @@ const App: React.FC = () => {
                         <img 
                           src="/data/2-3-1.jpg" 
                           alt="舉辦各類交通安全活動" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           兒童朝會校長交通安全宣導
@@ -1398,7 +1486,7 @@ const App: React.FC = () => {
                         <img 
                           src="/data/2-3-2.jpg" 
                           alt="舉辦各類交通安全活動" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           兒童朝會班級交通安全宣導
@@ -1408,12 +1496,24 @@ const App: React.FC = () => {
                         <img 
                           src="/data/2-3-3.jpg" 
                           alt="舉辦各類交通安全活動" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
                         />
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           兒童朝會班級交通安全宣導
                         </p>
                       </div>
+                      {Array.from({ length: 22 }, (_, index) => (
+                        <div key={`2-3-3-${index + 1}`} className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                          <img 
+                            src={`/data/2-3-3-${index + 1}.jpg`} 
+                            alt="舉辦各類交通安全活動" 
+                            className="w-full h-auto rounded-[32px] object-cover"
+                          />
+                          <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                            交通安全講師進行交安主題宣導
+                          </p>
+                        </div>
+                      ))}
                       <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-4.jpg" 
@@ -1438,6 +1538,26 @@ const App: React.FC = () => {
                         <img 
                           src="/data/2-3-6.jpg" 
                           alt="舉辦各類交通安全活動" 
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶親師趣味競賽交通安全宣導
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-8.jpg"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-auto rounded-[32px] object-cover"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          60週年校慶親師趣味競賽交通安全宣導
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-9.jpg"
+                          alt="舉辦各類交通安全活動"
                           className="w-full h-auto rounded-[32px] object-cover"
                         />
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
