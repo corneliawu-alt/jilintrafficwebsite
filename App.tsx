@@ -1237,6 +1237,9 @@ const App: React.FC = () => {
                         <img src="/data/2-1-6-15.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片15" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
                       </div>
                     </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      生活英語課程融入交通安全
+                    </h3>
                     <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                       <video 
                         src="/data/2-1-13.mp4" 
