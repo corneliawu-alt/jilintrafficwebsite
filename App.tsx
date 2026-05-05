@@ -1058,90 +1058,183 @@ const App: React.FC = () => {
                   {/* Images for 2-1 subcategory */}
                   {activeTab.subCategoryId === '2-1' && (
                     <>
-                    <div className="grid md:grid-cols-2 gap-8">
-                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-1.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      一年級交通安全課程
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-1-1-1.jpg"
+                          alt="一年級交通安全課程成果照片1"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-4.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-2.png"
+                          alt="一年級交通安全課程成果照片2"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-3.png" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-3.png"
+                          alt="一年級交通安全課程成果照片3"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-2.png" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-4.jpg"
+                          alt="一年級交通安全課程成果照片4"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-5.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-5.jpg"
+                          alt="一年級交通安全課程成果照片5"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-6.png" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-6.jpg"
+                          alt="一年級交通安全課程成果照片6"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-7.png" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-1-7.jpg"
+                          alt="一年級交通安全課程成果照片7"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
+                        />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      二年級交通安全課程
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-1.jpg" alt="二年級交通安全課程成果照片1" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-2.jpg" alt="二年級交通安全課程成果照片2" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-3.png" alt="二年級交通安全課程成果照片3" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-4.jpg" alt="二年級交通安全課程成果照片4" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-5.jpg" alt="二年級交通安全課程成果照片5" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-6.jpg" alt="二年級交通安全課程成果照片6" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-7.jpg" alt="二年級交通安全課程成果照片7" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-8.jpg" alt="二年級交通安全課程成果照片8" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-9.jpg" alt="二年級交通安全課程成果照片9" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-2-10.jpg" alt="二年級交通安全課程成果照片10" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      五年級交通安全課程
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-1-5-1.jpg"
+                          alt="五年級交通安全課程成果照片1"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-8.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-5-2.jpg"
+                          alt="五年級交通安全課程成果照片2"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-9.png" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-[320px] rounded-[32px] object-cover object-top"
+                        <img
+                          src="/data/2-1-5-3.jpg"
+                          alt="五年級交通安全課程成果照片3"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-11.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                        <img
+                          src="/data/2-1-5-4.jpg"
+                          alt="五年級交通安全課程成果照片4"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-10.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
+                        <img
+                          src="/data/2-1-5-5.jpg"
+                          alt="五年級交通安全課程成果照片5"
+                          className="w-full h-[280px] rounded-[32px] object-contain bg-white"
                         />
                       </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      六年級交通安全課程vs校長愛的叮嚀
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
-                        <img 
-                          src="/data/2-1-12.jpg" 
-                          alt="規劃培養核心能力的教學" 
-                          className="w-full h-auto rounded-[32px] object-cover"
-                        />
+                        <img src="/data/2-1-6-1.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片1" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-2.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片2" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-3.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片3" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-4.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片4" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-5.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片5" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-6.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片6" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-7.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片7" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-8.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片8" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-9.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片9" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-10.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片10" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-11.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片11" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-12.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片12" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-13.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片13" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-14.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片14" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-6-15.jpg" alt="六年級交通安全課程vs校長愛的叮嚀成果照片15" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
                       </div>
                     </div>
                     <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
