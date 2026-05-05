@@ -1654,10 +1654,80 @@ const App: React.FC = () => {
                         <img
                           src="/data/2-3-9.jpg"
                           alt="舉辦各類交通安全活動"
-                          className="w-full h-auto rounded-[32px] object-cover"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
                         />
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           60週年校慶親師趣味競賽交通安全宣導
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-10.JPG"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗前車輛檢查
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-11.JPG"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-12.JPG"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-13.JPG"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-14.JPG"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-15.jpg"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗檢查
+                        </p>
+                      </div>
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-16.jpg"
+                          alt="舉辦各類交通安全活動"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          校際交流后豐鐵馬道自行車體驗心得
                         </p>
                       </div>
                     </div>
