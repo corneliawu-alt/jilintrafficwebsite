@@ -1148,6 +1148,38 @@ const App: React.FC = () => {
                       </div>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      四年級交通安全課程
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-1.jpg" alt="四年級交通安全課程成果照片1" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-2.jpg" alt="四年級交通安全課程成果照片2" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-3.jpg" alt="四年級交通安全課程成果照片3" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-4.jpg" alt="四年級交通安全課程成果照片4" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-5.jpg" alt="四年級交通安全課程成果照片5" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-6.jpg" alt="四年級交通安全課程成果照片6" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-7.jpg" alt="四年級交通安全課程成果照片7" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-8.jpg" alt="四年級交通安全課程成果照片8" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-4-9.jpg" alt="四年級交通安全課程成果照片9" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
                       五年級交通安全課程
                     </h3>
                     <div className="grid md:grid-cols-2 gap-6 mb-8">
