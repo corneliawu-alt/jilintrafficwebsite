@@ -23,7 +23,21 @@ export const CATEGORIES: Category[] = [
     id: 'visit-data',
     title: '交通安全教育輔導訪視資料',
     icon: 'FileText',
-    content: '本頁為交通安全教育輔導訪視資料，待上傳。'
+    content: (
+      <div className="space-y-4">
+        <p>本頁提供交通安全教育輔導訪視資料預覽。</p>
+        <div className="w-full h-[75vh] rounded-2xl overflow-hidden border-4 border-[#fee2e2] shadow-lg bg-white">
+          <iframe
+            src="/0-0-0.pdf#toolbar=0&navpanes=0&scrollbar=0"
+            title="交通安全教育輔導訪視資料 PDF 預覽"
+            className="w-full h-full"
+          />
+        </div>
+        <p className="text-sm text-[#6b7280]">
+          已隱藏預覽工具列下載按鈕；但瀏覽器端無法完全防止使用者以其他方式取得檔案。
+        </p>
+      </div>
+    )
   },
   {
     id: 'safety-promotion',

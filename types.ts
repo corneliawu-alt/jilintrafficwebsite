@@ -12,7 +12,7 @@ export interface Category {
   title: string;
   icon: string;
   subCategories?: SubCategory[];
-  content?: string;
+  content?: string | React.ReactNode;
 }
 
 export type ActiveTab = {
