@@ -831,6 +831,18 @@ const App: React.FC = () => {
                       ))}
                     </div>
                   </div>
+                  <div className="clay-card p-10 bg-white border-8 border-white shadow-2xl mt-8">
+                    <h4 className="text-2xl md:text-3xl font-black text-[#4a4e69] mb-6 tracking-tight border-l-8 border-[#ffb5a7] pl-5">
+                      四、學校交通安全實況SWOT分析
+                    </h4>
+                    <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-xl">
+                      <img
+                        src="/data/0-6.png"
+                        alt="校園周邊交通安全實景"
+                        className="w-full h-auto rounded-[32px] object-contain"
+                      />
+                    </div>
+                  </div>
                 </section>
               </div>
             ) : (
@@ -1613,7 +1625,18 @@ const App: React.FC = () => {
 
                   {/* Images for 2-3 subcategory */}
                   {activeTab.subCategoryId === '2-3' && (
-                    <div className="grid md:grid-cols-2 gap-8">
+                    <div className="space-y-8">
+                      <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
+                        <img
+                          src="/data/2-3-0.png"
+                          alt="交通安全活動PDCA"
+                          className="w-full h-[320px] rounded-[32px] object-contain bg-white"
+                        />
+                        <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
+                          交通安全活動PDCA
+                        </p>
+                      </div>
+                      <div className="grid md:grid-cols-2 gap-8">
                       <div className="clay-card p-2 bg-white border-4 border-white shadow-2xl">
                         <img 
                           src="/data/2-3-1.jpg" 
@@ -1775,6 +1798,7 @@ const App: React.FC = () => {
                         <p className="text-center text-[#64748b] font-semibold text-sm mt-2 mb-1">
                           校際交流后豐鐵馬道自行車體驗心得
                         </p>
+                      </div>
                       </div>
                     </div>
                   )}
