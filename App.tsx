@@ -1030,11 +1030,11 @@ const App: React.FC = () => {
                         <div className="clay-card bg-[#fff9f9] p-6 border-4 border-[#f8fafc] flex flex-col items-start gap-4 transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7] hover:shadow-lg">
                           <div className="flex items-center gap-4 w-full">
                             <div className="w-12 h-12 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-                              <Bike size={24} />
+                              <Bus size={24} />
                             </div>
                             <div className="flex-1">
                               <p className="font-black text-[#881337] text-base leading-snug">
-                                4. 自行車教育
+                                4. 大眾運輸工具
                               </p>
                             </div>
                           </div>
@@ -1042,11 +1042,11 @@ const App: React.FC = () => {
                         <div className="clay-card bg-[#fff9f9] p-6 border-4 border-[#f8fafc] flex flex-col items-start gap-4 transition-all duration-300 hover:translate-y-[-5px] hover:border-[#ffb5a7] hover:shadow-lg md:col-span-2 lg:col-span-1">
                           <div className="flex items-center gap-4 w-full">
                             <div className="w-12 h-12 clay-button bg-[#ffb5a7] flex items-center justify-center text-white shadow-lg flex-shrink-0">
-                              <Bus size={24} />
+                              <Bike size={24} />
                             </div>
                             <div className="flex-1">
                               <p className="font-black text-[#881337] text-base leading-snug">
-                                5. 大眾運輸工具
+                                5. 自行車教育
                               </p>
                             </div>
                           </div>
@@ -1145,6 +1145,20 @@ const App: React.FC = () => {
                       </div>
                       <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
                         <img src="/data/2-1-2-10.jpg" alt="二年級交通安全課程成果照片10" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
+                      三年級交通安全課程
+                    </h3>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-3-1.jpg" alt="三年級交通安全課程成果照片1" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-3-2.jpg" alt="三年級交通安全課程成果照片2" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
+                      </div>
+                      <div className="clay-card p-2 bg-white overflow-hidden border-4 border-white shadow-2xl">
+                        <img src="/data/2-1-3-3.jpg" alt="三年級交通安全課程成果照片3" className="w-full h-[280px] rounded-[32px] object-contain bg-white" />
                       </div>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-black text-[#881337] mb-6">
