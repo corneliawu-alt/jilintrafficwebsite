@@ -125,7 +125,7 @@ export const CATEGORIES: Category[] = [
               {[
                 { text: '一年級：交通安全起步走', icon: <User className="w-4 h-4" /> },
                 { text: '二年級：優質小乘客', icon: <Car className="w-4 h-4" /> },
-                { text: '三年級：平安行，好心情', icon: <Smile className="w-4 h-4" /> },
+                { text: '三年級：行人車輛好通行', icon: <Smile className="w-4 h-4" /> },
                 { text: '四年級：搭車小高手', icon: <Bus className="w-4 h-4" /> },
                 { text: '五年級：快樂平安行', icon: <Award className="w-4 h-4" /> },
                 { text: '六年級：自行車逍遙遊', icon: <Bike className="w-4 h-4" /> },
